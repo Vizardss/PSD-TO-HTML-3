@@ -88,9 +88,70 @@ body {
   margin: 0 auto;
   box-sizing: border-box; }
 
+section {
+  padding: 100px 0; }
+
 body {
   font-size: 18px;
   font-family: "Open Sans", sans-serif; }
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.56em;
+  font-weight: 800;
+  color: #0eb493; }
+
+#features {
+  background-color: #f4f7f9; }
+  #features h3 {
+    text-align: center;
+    margin-bottom: 30px; }
+  #features .separator {
+    text-align: center; }
+    #features .separator:before, #features .separator:after {
+      content: "";
+      display: inline-block;
+      width: 6%;
+      height: 2px;
+      background-color: rgba(6, 32, 51, 0.1);
+      vertical-align: middle; }
+    #features .separator:before {
+      margin-right: 20px; }
+    #features .separator:after {
+      margin-left: 20px; }
+    #features .separator i {
+      color: rgba(6, 32, 51, 0.2);
+      font-size: 1.56em;
+      font-weight: 800;
+      vertical-align: middle; }
+  #features .features-content {
+    display: flex;
+    margin-top: 60px; }
+    #features .features-content .features-box:not(:last-of-type) {
+      margin-right: 45px; }
+    #features .features-content .features-box {
+      display: flex; }
+      #features .features-content .features-box .fbox-img {
+        color: #0eb493;
+        display: flex;
+        margin-right: 20px;
+        margin-top: -5px; }
+        #features .features-content .features-box .fbox-img i {
+          border: 1px solid #0eb493;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 40px;
+          width: 40px;
+          height: 40px; }
+      #features .features-content .features-box .fbox-desc h4 {
+        font-size: 1.11em;
+        font-weight: 600;
+        color: #062033;
+        margin-bottom: 30px; }
+      #features .features-content .features-box .fbox-desc p {
+        font-size: 0.72em;
+        line-height: 21px;
+        color: rgba(6, 32, 51, 0.7); }
 
 header {
   background-image: url(../img/banner.png);
@@ -132,6 +193,7 @@ header {
     header .header-desc h3 {
       font-size: 2.67em;
       font-weight: 300;
+      color: #fff;
       margin-bottom: 38px; }
       header .header-desc h3 span {
         color: #0feb9e; }

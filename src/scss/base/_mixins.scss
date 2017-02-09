@@ -1,0 +1,15 @@
+@mixin separator {
+  content: "";
+  display: inline-block;
+  width: 6%;
+  height: 2px;
+  background-color: rgba($color-general, 0.1);
+  vertical-align: middle;
+}
+
+@mixin separator-icon {
+  color: rgba($color-general, 0.2);
+  font-size: 1.56em;
+  font-weight: $fontw-extrabold;
+  vertical-align: middle;
+}

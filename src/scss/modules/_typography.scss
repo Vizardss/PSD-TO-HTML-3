@@ -2,3 +2,10 @@ body {
   font-size: 18px;
   font-family: $font-general;
 }
+
+h3 {
+  text-transform: uppercase;
+  font-size: 1.56em;
+  font-weight: $fontw-extrabold;
+  color: $color-accent;
+}
