@@ -2,8 +2,7 @@
   background-color: #f4f7f9;
 
   h3 {
-    text-align: center;
-    margin-bottom: 30px;
+    @include header;
   }
 
 .separator {
@@ -76,5 +75,160 @@
     }
   }
 }
+}
 
+#works {
+  background-color: #fff;
+
+  h3 {
+    @include header;
+  }
+
+  .separator {
+    text-align: center;
+
+    &:before, &:after {
+      @include separator;
+    }
+
+    &:before {
+      margin-right: 20px;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+
+    i {
+      @include separator-icon;
+    }
+  }
+
+  .works-cat {
+    margin-top: 50px;
+
+    ul {
+      list-style-type: none;
+      text-align: center;
+      li {
+        display: inline-block;
+        a {
+          text-decoration: none;
+          color: $color-general;
+          font-size: 0.78em;
+          font-weight: $fontw-bold;
+          padding: 10px 20px;
+
+          &:hover {
+            background-color: $color-accent;
+            color: $color-secondary;
+            border-radius: 5px;
+
+          }
+        }
+      }
+    }
+  }
+
+  .works-portfolio {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+
+
+  .works-box {
+    width: 25%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .works-img-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color-accent, 0.9);
+      color: $color-secondary;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s linear;
+
+      h4 {
+        font-size: 1em;
+        line-height: 24px;
+        font-weight: $fontw-bold;
+      }
+
+      p {
+        font-size: 0.78em;
+        line-height: 24px;
+      }
+
+      i {
+        width: 30px;
+        height: 30px;
+        border: 1px solid $color-secondary;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto 30px;
+      }
+
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.3s linear;
+      }
+    }
+  }
+  }
+}
+
+#team {
+    background-color: #fff;
+
+    h3 {
+      @include header;
+    }
+
+    .separator {
+      text-align: center;
+
+      &:before, &:after {
+        @include separator;
+      }
+
+      &:before {
+        margin-right: 20px;
+      }
+
+      &:after {
+        margin-left: 20px;
+      }
+
+      i {
+        @include separator-icon;
+    }
+  }
+
+  p {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 1em;
+    font-weight: $fontw-semibold;
+    line-height: 24px;
+    color: $color-general;
+  }
+
+  .people {
+    margin-top: 110px;
+  }
 }
