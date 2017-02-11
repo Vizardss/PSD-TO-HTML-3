@@ -12,3 +12,41 @@ body {
 section {
   padding: 100px 0;
 }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(91,100,110,0.5);
+  font-size: 0.72em;
+  line-height: 24px;
+  font-weight: normal;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(91,100,110,0.5);
+  font-size: 0.72em;
+  line-height: 24px;
+  font-weight: normal;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(91,100,110,0.5);
+  font-size: 0.72em;
+  line-height: 24px;
+  font-weight: normal;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: rgba(91,100,110,0.5);
+  font-size: 0.72em;
+  line-height: 24px;
+  font-weight: normal;
+}
+
+#toTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  font-size: 2.3em;
+
+  &:hover {
+    color: $color-general;
+    cursor: pointer;
+  }
+}

@@ -5,12 +5,20 @@ header {
   height: 100vh;
   min-height: 800px;
 
+  .header-top {
+    background-color: rgba(16,22,54,.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11111;
+  }
+
   .main-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    background-color: rgba(16,22,54,.2);
 
     .logo {
       text-decoration: none;

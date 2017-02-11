@@ -145,20 +145,19 @@
       height: 100%;
     }
 
-    .works-img-hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+    &:hover .works-img-hover {
       height: 100%;
-      background-color: rgba($color-accent, 0.9);
-      color: $color-secondary;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      opacity: 0;
-      transition: opacity 0.3s linear;
+      bottom: 0;
+      transition: all 0.3s linear;
+    }
+
+    .works-img-hover {
+    @include hover-img;
+    bottom: 0;
+    opacity: 1;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
 
       h4 {
         font-size: 1em;
@@ -183,17 +182,14 @@
         margin: 0 auto 30px;
       }
 
-      &:hover {
-        opacity: 1;
-        transition: opacity 0.3s linear;
-      }
+
     }
   }
   }
 }
 
 #team {
-    background-color: #fff;
+    background-color: $color-secondary;
 
     h3 {
       @include header;
@@ -230,5 +226,322 @@
 
   .people {
     margin-top: 110px;
+    display: flex;
+    justify-content: space-between;
+
   }
+
+  .team-skill {
+    position: relative;
+
+    .team-skill-hover {
+      @include hover-img;
+      display: block;
+      &:hover {
+        opacity: 1;
+        transition: opacity 0.3s linear;
+      }
+
+
+      h5, p {
+        margin-top: 25px;
+        font-size: 0.89em;
+        color: $color-secondary;
+        line-height: 24px;
+
+      }
+
+    h5 {
+        font-weight: $fontw-bold;
+      }
+
+      ul {
+        margin-top: 50px;
+        list-style-type: none;
+
+        li {
+          display: inline-block;
+
+          a {
+            color: $color-secondary;
+            text-decoration: none;
+            i {
+              width: 42px;
+              height: 42px;
+              background-color: rgba(0,0,0,.3);
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+
+        }
+      }
+    }
+
+  }
+
+  .team-info {
+
+    &:hover > p{
+      color: $color-accent;
+    }
+    p {
+      margin-top: 20px;
+      font-size: 1em;
+      line-height: 24px;
+      color: $color-general;
+    }
+
+
+    span {
+      margin-top: 5px;
+      font-size: 0.72em;
+      line-height: 24px;
+      color: rgba($color-general, 0.56);
+      text-align: center;
+      display: block;
+    }
+  }
+}
+
+#facts {
+  background-image: url(../img/banner-facts.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 600px;
+  padding: 0;
+
+
+  .facts-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba($color-general, 0.80);
+    width: 100%;
+    height: 100%;
+  }
+
+  h3 {
+    @include header;
+    padding-top: 80px;
+  }
+
+  .separator {
+    text-align: center;
+
+    &:before, &:after {
+      @include separator;
+      background-color: rgba($color-secondary, 0.5);
+    }
+
+    &:before {
+      margin-right: 20px;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+
+    i {
+      @include separator-icon;
+      color: $color-secondary;
+    }
+  }
+
+  .facts-content {
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: space-around;
+
+    i {
+      width: 130px;
+      height: 130px;
+      margin: 0 auto;
+
+      border: 2px solid rgba($color-secondary, 0.4);
+      border-radius: 50%;
+      color: $color-secondary;
+      font-size: 2em;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h3 {
+      color: $color-secondary;
+      font-size: 3.33em;
+      font-weight: $fontw-semibold;
+
+      padding-top: 50px;
+      text-align: center;
+    }
+
+    p {
+      color: $color-secondary;
+      text-transform: uppercase;
+      margin-top: 20px;
+
+    }
+  }
+}
+
+#contact {
+  background-color: $color-secondary;
+  padding-bottom: 0;
+  h3 {
+    @include header;
+  }
+
+  .separator {
+    text-align: center;
+
+    &:before, &:after {
+      @include separator;
+    }
+
+    &:before {
+      margin-right: 20px;
+    }
+
+    &:after {
+      margin-left: 20px;
+    }
+
+    i {
+      @include separator-icon;
+  }
+}
+
+p {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: $fontw-semibold;
+  line-height: 24px;
+  color: $color-general;
+}
+
+.contact-content {
+  margin-top: 80px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 20%;
+  h4 {
+    font-size: 1.22em;
+    line-height: 32px;
+    color: $color-general;
+    font-weight: normal;
+  }
+  ul {
+    margin-top: 20px;
+    list-style-type: none;
+
+    li {
+      color: #6a737b;
+      font-size: 0.72em;
+      line-height: 24px;
+    }
+  }
+}
+
+.contact-form {
+  width:70%;
+  margin-right: 50px;
+  h4 {
+    font-size: 1.33em;
+    line-height: 24px;
+    font-weight: $fontw-bold;
+    color: $color-general;
+  }
+  form {
+    margin-top: 40px;
+    width: 100%;
+    .form-group {
+      display: flex;
+      input, textarea {
+        flex-grow: 1;
+        border: none;
+        border-bottom: 2px solid rgba(0,0,0,.2);
+        outline: none;
+      }
+      input {
+        padding-bottom: 20px;
+      }
+      input:first-child {
+        margin-right: 30px;
+      }
+      textarea{
+        margin-top: 50px;
+      }
+    }
+  }
+
+.form-submit {
+  display: flex;
+  justify-content: flex-end;
+  .btn-form {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin-top: 40px;
+    color: #000;
+    line-height: 24px;
+    font-size: 0.89em;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    i {
+      color: $color-accent;
+      font-size: 1.2em;
+      padding-right: 10px;
+    }
+
+  }
+}
+}
+
+.contact-icons {
+  width: 10%;
+  ul {
+    list-style-type: none;
+    margin-top: 20px;
+    li {
+      padding-bottom: 25px;
+
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+      a {
+        color: rgba($color-general, 0.2);
+        text-decoration: none;
+        font-size: 1.2em;
+      }
+
+    }
+
+  }
+}
+
+.map {
+  margin-top: 100px;
+  border-bottom: 3px solid $color-general;
+
+  iframe {
+    filter: grayscale(99%);
+    -webkit-filter: grayscale(99%);
+  }
+}
+
 }

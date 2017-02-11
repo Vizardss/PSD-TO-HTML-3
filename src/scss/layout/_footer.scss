@@ -1,0 +1,151 @@
+footer {
+  padding: 100px 0;
+  background-color: $color-accent;
+  color: $color-secondary;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  .footer-brandi, .footer-subscribe, .footer-explore, .copyrights {
+    flex: 1;
+  }
+
+  .footer-brandi, .footer-subscribe {
+    margin-right: 30px;
+  }
+
+  .footer-brandi {
+    h4 {
+      font-size: 1.55em;
+      font-family: $font-second;
+      margin-bottom: 40px;
+    }
+    p {
+      font-size: 0.72em;
+      line-height: 24px;
+    }
+  }
+
+  .footer-subscribe, .footer-explore {
+    h5{
+      font-size: 0.78em;
+      font-weight: $fontw-bold;
+      line-height: 24px;
+
+    }
+  }
+
+  .footer-subscribe {
+    h5{
+      margin-bottom: 50px;
+    }
+
+    .footer-form{
+      display: flex;
+
+      input, button {
+        background: none;
+        border: 2px solid $color-secondary;
+        padding: 15px;
+        outline: none;
+
+      }
+      input {
+        border-right: none;
+        border-radius: 3px 0 0 3px;
+      }
+      button {
+        border-left: none;
+        border-radius: 0 3px 3px 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        i {
+          font-size: 1.2em;
+          color: #57bdaa;
+        }
+      }
+    }
+    p{
+      font-size: 0.72em;
+      line-height: 24px;
+      margin-top: 20px;
+    }
+  }
+
+  .footer-explore {
+    margin-right: 70px;
+    h5{
+      margin-bottom: 40px;
+    }
+
+    .explore-list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        // padding-bottom: 20px;
+
+        a {
+          text-decoration: none;
+          color: $color-secondary;
+          font-size: 0.72em;
+          line-height: 32px;
+          transition: color 0.3s linear;
+
+          &:hover {
+            color: $color-general;
+            transition: color 0.3s linear;
+          }
+        }
+      }
+    }
+  }
+
+  .copyrights {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .copy {
+      display: flex;
+      margin-top: 70px;
+      &:before {
+        content: '';
+        border-left: 1px solid rgba(23,82,110, 0.3);
+      }
+
+      p {
+
+        i {
+          color: rgba($color-secondary, 0.3);
+          font-size: 1em;
+        }
+
+        a {
+          text-decoration: none;
+          color: $color-general;
+        }
+      }
+    }
+
+
+    p {
+      font-size: 0.72em;
+      line-height: 24px;
+      padding-left: 10px;
+    }
+ > p{
+   color: $color-general;
+ }
+  }
+}
