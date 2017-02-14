@@ -87,6 +87,9 @@ body {
   width: 1170px;
   margin: 0 auto;
   box-sizing: border-box; }
+  @media screen and (max-width: 1169px) {
+    .container {
+      width: 100%; } }
 
 section {
   padding: 100px 0; }
@@ -164,15 +167,32 @@ h3 {
   #features .features-content {
     display: flex;
     margin-top: 60px; }
+    @media screen and (max-width: 991px) {
+      #features .features-content {
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-direction: column; } }
     #features .features-content .features-box:not(:last-of-type) {
       margin-right: 45px; }
+      @media screen and (max-width: 991px) {
+        #features .features-content .features-box:not(:last-of-type) {
+          margin-right: 0; } }
     #features .features-content .features-box {
       display: flex; }
+      @media screen and (max-width: 991px) {
+        #features .features-content .features-box {
+          display: inline-block;
+          text-align: center;
+          margin-bottom: 50px; } }
       #features .features-content .features-box .fbox-img {
         color: #0eb493;
         display: flex;
         margin-right: 20px;
         margin-top: -5px; }
+        @media screen and (max-width: 991px) {
+          #features .features-content .features-box .fbox-img {
+            justify-content: center;
+            margin: 0 0 20px 0; } }
         #features .features-content .features-box .fbox-img i {
           border: 1px solid #0eb493;
           border-radius: 50%;
@@ -220,6 +240,10 @@ h3 {
       text-align: center; }
       #works .works-cat ul li {
         display: inline-block; }
+        @media screen and (max-width: 550px) {
+          #works .works-cat ul li {
+            display: block;
+            margin-bottom: 20px; } }
         #works .works-cat ul li a {
           text-decoration: none;
           color: #062033;
@@ -234,8 +258,11 @@ h3 {
     margin-top: 35px;
     display: flex;
     flex-wrap: wrap; }
+    @media screen and (max-width: 767px) {
+      #works .works-portfolio {
+        flex-direction: column; } }
     #works .works-portfolio .works-box {
-      width: 25%;
+      flex-basis: 25%;
       position: relative; }
       #works .works-portfolio .works-box img {
         width: 100%;
@@ -280,6 +307,9 @@ h3 {
           align-items: center;
           text-align: center;
           margin: 0 auto 30px; }
+          @media screen and (max-width: 991px) {
+            #works .works-portfolio .works-box .works-img-hover i {
+              margin-bottom: 10px; } }
 
 #team {
   background-color: #fff; }
@@ -315,8 +345,18 @@ h3 {
     margin-top: 110px;
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 767px) {
+      #team .people {
+        flex-direction: column; } }
+  @media screen and (max-width: 767px) {
+    #team .team-info {
+      margin-bottom: 50px; } }
   #team .team-skill {
     position: relative; }
+    #team .team-skill img {
+      width: 100%;
+      height: auto;
+      display: block; }
     #team .team-skill .team-skill-hover {
       position: absolute;
       top: 0;
@@ -332,6 +372,10 @@ h3 {
       opacity: 0;
       transition: opacity 0.3s linear;
       display: block; }
+      @media screen and (max-width: 767px) {
+        #team .team-skill .team-skill-hover {
+          display: flex;
+          flex-direction: column; } }
       #team .team-skill .team-skill-hover:hover {
         opacity: 1;
         transition: opacity 0.3s linear; }
@@ -340,11 +384,20 @@ h3 {
         font-size: 0.89em;
         color: #fff;
         line-height: 24px; }
+        @media screen and (max-width: 1199px) and (min-width: 768px) {
+          #team .team-skill .team-skill-hover h5, #team .team-skill .team-skill-hover p {
+            font-size: 0.6em; } }
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+          #team .team-skill .team-skill-hover h5, #team .team-skill .team-skill-hover p {
+            margin-top: 15px; } }
       #team .team-skill .team-skill-hover h5 {
         font-weight: 700; }
       #team .team-skill .team-skill-hover ul {
         margin-top: 50px;
         list-style-type: none; }
+        @media screen and (max-width: 991px) {
+          #team .team-skill .team-skill-hover ul {
+            margin-top: 20px; } }
         #team .team-skill .team-skill-hover ul li {
           display: inline-block; }
           #team .team-skill .team-skill-hover ul li a {
@@ -357,6 +410,10 @@ h3 {
               display: flex;
               justify-content: center;
               align-items: center; }
+              @media screen and (max-width: 991px) {
+                #team .team-skill .team-skill-hover ul li a i {
+                  width: 30px;
+                  height: 30px; } }
   #team .team-info:hover > p {
     color: #0eb493; }
   #team .team-info p {
@@ -380,6 +437,9 @@ h3 {
   position: relative;
   height: 600px;
   padding: 0; }
+  @media screen and (max-width: 767px) {
+    #facts {
+      height: 1700px; } }
   #facts .facts-bg {
     position: absolute;
     top: 0;
@@ -415,6 +475,9 @@ h3 {
     margin-top: 20px;
     display: flex;
     justify-content: space-around; }
+    @media screen and (max-width: 767px) {
+      #facts .facts-content {
+        flex-direction: column; } }
     #facts .facts-content i {
       width: 130px;
       height: 130px;
@@ -436,6 +499,12 @@ h3 {
       color: #fff;
       text-transform: uppercase;
       margin-top: 20px; }
+      @media screen and (max-width: 767px) {
+        #facts .facts-content p {
+          text-align: center; } }
+  @media screen and (max-width: 767px) {
+    #facts .fact-box {
+      margin-top: 50px; } }
 
 #contact {
   background-color: #fff;
@@ -553,6 +622,9 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
   min-height: 800px; }
+  @media screen and (max-width: 991px) {
+    header {
+      min-height: 100vh; } }
   header .header-top {
     background-color: rgba(16, 22, 54, 0.2);
     position: fixed;
@@ -585,21 +657,34 @@ header {
     color: #fff;
     text-align: center;
     padding-top: 55vh; }
+    @media screen and (max-width: 1199px) {
+      header .header-desc {
+        padding-top: 30vh; } }
     header .header-desc h2 {
       font-size: 3.44em;
       font-weight: 300;
       margin-bottom: 15px; }
+      @media screen and (max-width: 767px) {
+        header .header-desc h2 {
+          font-size: 2.5em; } }
       header .header-desc h2 span {
         font-weight: 700; }
     header .header-desc h3 {
       font-size: 2.67em;
       font-weight: 300;
       color: #fff;
+      text-transform: lowercase;
       margin-bottom: 38px; }
+      @media screen and (max-width: 767px) {
+        header .header-desc h3 {
+          font-size: 2em; } }
       header .header-desc h3 span {
         color: #0feb9e; }
     header .header-desc p {
       font-weight: 300; }
+      @media screen and (max-width: 400px) {
+        header .header-desc p {
+          font-size: 0.89em; } }
       header .header-desc p:before, header .header-desc p:after {
         content: '';
         width: 3%;

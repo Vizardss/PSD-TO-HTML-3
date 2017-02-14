@@ -30,12 +30,29 @@
 
   margin-top: 60px;
 
+  @media screen and (max-width: 991px) {
+    margin-left: 10px;
+    margin-right: 10px;
+
+    flex-direction: column;
+  }
+
   .features-box:not(:last-of-type) {
     margin-right: 45px;
+
+    @media screen and (max-width: 991px) {
+      margin-right: 0;
+    }
   }
 
   .features-box {
     display: flex;
+
+    @media screen and (max-width: 991px) {
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 50px;
+    }
 
 
     .fbox-img {
@@ -44,6 +61,11 @@
 
       margin-right: 20px;
       margin-top: -5px;
+
+      @media screen and (max-width: 991px) {
+        justify-content: center;
+        margin: 0 0 20px 0;
+      }
 
       i {
         border: 1px solid $color-accent;
@@ -112,6 +134,11 @@
       text-align: center;
       li {
         display: inline-block;
+
+        @media screen and (max-width: 550px) {
+          display: block;
+          margin-bottom: 20px;
+        }
         a {
           text-decoration: none;
           color: $color-general;
@@ -135,9 +162,13 @@
     display: flex;
     flex-wrap: wrap;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
 
   .works-box {
-    width: 25%;
+    flex-basis: 25%;
     position: relative;
 
     img {
@@ -168,6 +199,8 @@
       p {
         font-size: 0.78em;
         line-height: 24px;
+
+
       }
 
       i {
@@ -180,6 +213,10 @@
         align-items: center;
         text-align: center;
         margin: 0 auto 30px;
+
+        @media screen and (max-width: 991px) {
+          margin-bottom: 10px;
+        }
       }
 
 
@@ -229,14 +266,35 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
+  }
+
+  .team-info {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
   }
 
   .team-skill {
     position: relative;
 
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
     .team-skill-hover {
       @include hover-img;
       display: block;
+
+      @media screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+      }
       &:hover {
         opacity: 1;
         transition: opacity 0.3s linear;
@@ -249,6 +307,15 @@
         color: $color-secondary;
         line-height: 24px;
 
+        @media screen and (max-width: 1199px) and (min-width: 768px) {
+          font-size: 0.6em;
+
+        }
+
+        @media screen and (max-width: 991px) and (min-width: 768px) {
+          margin-top: 15px;
+        }
+
       }
 
     h5 {
@@ -258,6 +325,10 @@
       ul {
         margin-top: 50px;
         list-style-type: none;
+
+        @media screen and (max-width: 991px) {
+          margin-top: 20px;
+        }
 
         li {
           display: inline-block;
@@ -272,6 +343,11 @@
               display: flex;
               justify-content: center;
               align-items: center;
+
+              @media screen and (max-width: 991px) {
+                width: 30px;
+                height: 30px;
+              }
             }
           }
 
@@ -313,6 +389,10 @@
   position: relative;
   height: 600px;
   padding: 0;
+
+  @media screen and (max-width: 767px) {
+    height: 1700px;
+  }
 
 
   .facts-bg {
@@ -357,6 +437,10 @@
     display: flex;
     justify-content: space-around;
 
+    @media screen and (max-width: 767px) {
+      flex-direction: column;
+    }
+
     i {
       width: 130px;
       height: 130px;
@@ -385,6 +469,16 @@
       text-transform: uppercase;
       margin-top: 20px;
 
+      @media screen and (max-width: 767px) {
+        text-align: center;
+      }
+
+    }
+  }
+
+  .fact-box {
+    @media screen and (max-width: 767px) {
+      margin-top: 50px;
     }
   }
 }
