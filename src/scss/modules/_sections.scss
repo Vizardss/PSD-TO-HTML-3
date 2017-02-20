@@ -524,10 +524,23 @@ p {
 
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    padding: 20px;
+  }
 }
 
 .contact-info {
   width: 20%;
+  @media screen and (max-width: 1199px) {
+    padding-left: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
   h4 {
     font-size: 1.22em;
     line-height: 32px;
@@ -537,7 +550,6 @@ p {
   ul {
     margin-top: 20px;
     list-style-type: none;
-
     li {
       color: #6a737b;
       font-size: 0.72em;
@@ -549,17 +561,37 @@ p {
 .contact-form {
   width:70%;
   margin-right: 50px;
+
+  @media screen and (max-width: 1199px) {
+    padding-left: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    padding-left: 0px;
+
+    margin-top: 30px;
+  }
   h4 {
     font-size: 1.33em;
     line-height: 24px;
     font-weight: $fontw-bold;
     color: $color-general;
+    @media screen and (max-width: 1199px) {
+      padding-left: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      padding-left: 0;
+    }
   }
   form {
     margin-top: 40px;
     width: 100%;
     .form-group {
       display: flex;
+      @media screen and (max-width: 767px) {
+        flex-direction: column;
+      }
       input, textarea {
         flex-grow: 1;
         border: none;
@@ -571,6 +603,10 @@ p {
       }
       input:first-child {
         margin-right: 30px;
+        @media screen and (max-width: 767px) {
+          margin-right: 0;
+          margin-bottom: 30px;
+        }
       }
       textarea{
         margin-top: 50px;
@@ -581,6 +617,9 @@ p {
 .form-submit {
   display: flex;
   justify-content: flex-end;
+  @media screen and (max-width: 767px) {
+    justify-content: center;
+  }
   .btn-form {
     background-color: transparent;
     border: none;
@@ -607,9 +646,17 @@ p {
 
 .contact-icons {
   width: 10%;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
   ul {
     list-style-type: none;
     margin-top: 20px;
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 50px;
+    }
     li {
       padding-bottom: 25px;
 

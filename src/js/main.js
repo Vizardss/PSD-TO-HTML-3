@@ -36,4 +36,8 @@ $(document).ready(function(){
     }
   }
 });
+// Mobile menu
+$('.nav-btn').on('click', function() {
+  $('nav').slideToggle();
+});
 });

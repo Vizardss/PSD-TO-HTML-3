@@ -1,8 +1,25 @@
 nav {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: $color-accent;
+    display: none;
+  }
   ul {
+    @media screen and (max-width: 767px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
     li {
       display: inline-block;
       padding-right: 35px;
+      @media screen and (max-width: 767px) {
+        padding: 20px 0;
+      }
 
       &:last-child {
         padding-right: 0;
@@ -14,12 +31,60 @@ nav {
         color: $color-secondary;
         font-size: 0.72em;
 
+        @media screen and (max-width: 767px) {
+          font-size: 1em;
+        }
+
         &:hover {
           border-top: 1px solid #32b0ee;
+          @media screen and (max-width: 767px) {
+            border: none;
+          }
         }
       }
 
 
     }
   }
+}
+
+.nav-btn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  display: none;
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+
+  span {
+    height: 3px;
+    width: 34px;
+    background-color: $color-secondary;
+    display: block;
+
+    &:after, &:before {
+      content: "";
+      height: 3px;
+      width: 34px;
+      background-color: $color-secondary;
+      display: block;
+      position: absolute;
+    }
+
+    &:after {
+      bottom: 20px;
+    }
+
+    &:before {
+      top: 20px;
+    }
+  }
+
 }

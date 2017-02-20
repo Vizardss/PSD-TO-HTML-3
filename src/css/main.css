@@ -541,8 +541,20 @@ h3 {
     margin-top: 80px;
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 767px) {
+      #contact .contact-content {
+        flex-direction: column;
+        padding: 20px; } }
   #contact .contact-info {
     width: 20%; }
+    @media screen and (max-width: 1199px) {
+      #contact .contact-info {
+        padding-left: 20px; } }
+    @media screen and (max-width: 767px) {
+      #contact .contact-info {
+        width: 100%;
+        text-align: center;
+        padding: 0; } }
     #contact .contact-info h4 {
       font-size: 1.22em;
       line-height: 32px;
@@ -558,16 +570,34 @@ h3 {
   #contact .contact-form {
     width: 70%;
     margin-right: 50px; }
+    @media screen and (max-width: 1199px) {
+      #contact .contact-form {
+        padding-left: 20px; } }
+    @media screen and (max-width: 767px) {
+      #contact .contact-form {
+        width: 100%;
+        padding-left: 0px;
+        margin-top: 30px; } }
     #contact .contact-form h4 {
       font-size: 1.33em;
       line-height: 24px;
       font-weight: 700;
       color: #062033; }
+      @media screen and (max-width: 1199px) {
+        #contact .contact-form h4 {
+          padding-left: 20px; } }
+      @media screen and (max-width: 767px) {
+        #contact .contact-form h4 {
+          text-align: center;
+          padding-left: 0; } }
     #contact .contact-form form {
       margin-top: 40px;
       width: 100%; }
       #contact .contact-form form .form-group {
         display: flex; }
+        @media screen and (max-width: 767px) {
+          #contact .contact-form form .form-group {
+            flex-direction: column; } }
         #contact .contact-form form .form-group input, #contact .contact-form form .form-group textarea {
           flex-grow: 1;
           border: none;
@@ -577,11 +607,18 @@ h3 {
           padding-bottom: 20px; }
         #contact .contact-form form .form-group input:first-child {
           margin-right: 30px; }
+          @media screen and (max-width: 767px) {
+            #contact .contact-form form .form-group input:first-child {
+              margin-right: 0;
+              margin-bottom: 30px; } }
         #contact .contact-form form .form-group textarea {
           margin-top: 50px; }
     #contact .contact-form .form-submit {
       display: flex;
       justify-content: flex-end; }
+      @media screen and (max-width: 767px) {
+        #contact .contact-form .form-submit {
+          justify-content: center; } }
       #contact .contact-form .form-submit .btn-form {
         background-color: transparent;
         border: none;
@@ -599,9 +636,17 @@ h3 {
           padding-right: 10px; }
   #contact .contact-icons {
     width: 10%; }
+    @media screen and (max-width: 767px) {
+      #contact .contact-icons {
+        width: 100%; } }
     #contact .contact-icons ul {
       list-style-type: none;
       margin-top: 20px; }
+      @media screen and (max-width: 767px) {
+        #contact .contact-icons ul {
+          display: flex;
+          justify-content: space-around;
+          margin-top: 50px; } }
       #contact .contact-icons ul li {
         padding-bottom: 25px; }
         #contact .contact-icons ul li:last-child {
@@ -632,6 +677,9 @@ header {
     left: 0;
     right: 0;
     z-index: 11111; }
+    @media screen and (max-width: 1199px) {
+      header .header-top {
+        padding: 0 20px; } }
   header .main-nav {
     display: flex;
     justify-content: space-between;
@@ -712,17 +760,73 @@ header {
           header .header-icons ul li a:hover {
             color: #fff; }
 
+@media screen and (max-width: 767px) {
+  nav {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: #0eb493;
+    display: none; } }
+
+@media screen and (max-width: 767px) {
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; } }
+
 nav ul li {
   display: inline-block;
   padding-right: 35px; }
+  @media screen and (max-width: 767px) {
+    nav ul li {
+      padding: 20px 0; } }
   nav ul li:last-child {
     padding-right: 0; }
   nav ul li a {
     text-decoration: none;
     color: #fff;
     font-size: 0.72em; }
+    @media screen and (max-width: 767px) {
+      nav ul li a {
+        font-size: 1em; } }
     nav ul li a:hover {
       border-top: 1px solid #32b0ee; }
+      @media screen and (max-width: 767px) {
+        nav ul li a:hover {
+          border: none; } }
+
+.nav-btn {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  height: 60px;
+  width: 60px;
+  border: 0;
+  background: transparent;
+  padding: 10px;
+  outline: none;
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .nav-btn {
+      display: block; } }
+  .nav-btn span {
+    height: 3px;
+    width: 34px;
+    background-color: #fff;
+    display: block; }
+    .nav-btn span:after, .nav-btn span:before {
+      content: "";
+      height: 3px;
+      width: 34px;
+      background-color: #fff;
+      display: block;
+      position: absolute; }
+    .nav-btn span:after {
+      bottom: 20px; }
+    .nav-btn span:before {
+      top: 20px; }
 
 footer {
   padding: 100px 0;
@@ -731,10 +835,17 @@ footer {
   footer .footer-content {
     display: flex;
     justify-content: space-between; }
+    @media screen and (max-width: 767px) {
+      footer .footer-content {
+        flex-direction: column;
+        padding: 0 20px; } }
   footer .footer-brandi, footer .footer-subscribe, footer .footer-explore, footer .copyrights {
     flex: 1; }
   footer .footer-brandi, footer .footer-subscribe {
     margin-right: 30px; }
+    @media screen and (max-width: 767px) {
+      footer .footer-brandi, footer .footer-subscribe {
+        margin-right: 0; } }
   footer .footer-brandi h4 {
     font-size: 1.55em;
     font-family: "Pacifico", sans-serif;
@@ -746,6 +857,9 @@ footer {
     font-size: 0.78em;
     font-weight: 700;
     line-height: 24px; }
+  @media screen and (max-width: 767px) {
+    footer .footer-subscribe {
+      margin-top: 30px; } }
   footer .footer-subscribe h5 {
     margin-bottom: 50px; }
   footer .footer-subscribe .footer-form {
@@ -754,10 +868,14 @@ footer {
       background: none;
       border: 2px solid #fff;
       padding: 15px;
-      outline: none; }
+      outline: none;
+      color: #fff; }
     footer .footer-subscribe .footer-form input {
       border-right: none;
       border-radius: 3px 0 0 3px; }
+      @media screen and (max-width: 767px) {
+        footer .footer-subscribe .footer-form input {
+          width: 100%; } }
     footer .footer-subscribe .footer-form button {
       border-left: none;
       border-radius: 0 3px 3px 0; }
@@ -772,11 +890,18 @@ footer {
     margin-top: 20px; }
   footer .footer-explore {
     margin-right: 70px; }
+    @media screen and (max-width: 767px) {
+      footer .footer-explore {
+        margin-right: 0;
+        margin-top: 30px; } }
     footer .footer-explore h5 {
       margin-bottom: 40px; }
     footer .footer-explore .explore-list {
       display: flex;
       justify-content: space-between; }
+      @media screen and (max-width: 767px) {
+        footer .footer-explore .explore-list {
+          flex-direction: column; } }
     footer .footer-explore ul {
       list-style: none; }
       footer .footer-explore ul li a {
@@ -795,6 +920,9 @@ footer {
     footer .copyrights .copy {
       display: flex;
       margin-top: 70px; }
+      @media screen and (max-width: 767px) {
+        footer .copyrights .copy {
+          justify-content: center; } }
       footer .copyrights .copy:before {
         content: '';
         border-left: 1px solid rgba(23, 82, 110, 0.3); }
@@ -810,3 +938,6 @@ footer {
       padding-left: 10px; }
     footer .copyrights > p {
       color: #062033; }
+      @media screen and (max-width: 767px) {
+        footer .copyrights > p {
+          text-align: center; } }

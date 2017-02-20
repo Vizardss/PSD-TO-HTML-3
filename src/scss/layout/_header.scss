@@ -16,6 +16,10 @@ header {
     left: 0;
     right: 0;
     z-index: 11111;
+
+    @media screen and (max-width: 1199px) {
+      padding: 0 20px;
+    }
   }
 
   .main-nav {
